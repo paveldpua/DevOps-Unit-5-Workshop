@@ -1,4 +1,5 @@
 # DevOps Unit 5 Workshop
+![CI workflow](https://github.com/paveldpua/DevOps-Unit-5-Workshop/actions/workflows/continuous-integration-workflow.yml/badge.svg)
 
 Welcome to the Unit 5 Workshop!
 
