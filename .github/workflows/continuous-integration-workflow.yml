@@ -1,5 +1,13 @@
 name: Continuous Integration
-on: [push]                      # Will make the workflow run every time you push to any branch
+on: 
+  push:
+    branches:
+      - main
+
+  # Trigger on pull requests where the target branch is main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -14,7 +22,7 @@ jobs:
     - name: Dotnet test
       run: dotnet build
 
-    - name: npm
+    - name: npm install, test, lint
       run: |
            cd DotnetTemplate.Web
            echo "Run npm install"
