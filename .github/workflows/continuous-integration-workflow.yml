@@ -10,8 +10,8 @@ on:
       - main
 
 jobs:
-  build:
-    name: Build and test
+  build_dotnet:
+    name: Build and test dotnet
     runs-on: ubuntu-latest      # Sets the build environment a machine with the latest Ubuntu installed
     steps:
     - uses: actions/checkout@v4 # Adds a step to checkout the repository code
@@ -22,6 +22,10 @@ jobs:
     - name: Dotnet test
       run: dotnet build
 
+  npm:
+    name: Build and test npm
+    runs-on: ubuntu-latest      # Sets the build environment a machine with the latest Ubuntu installed
+    steps: 
     - name: npm install, test, lint
       run: |
            cd DotnetTemplate.Web
